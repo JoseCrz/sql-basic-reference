@@ -1,0 +1,7 @@
+To load data use following commands, set in the directory the files will be loaded:
+
+schema:
+mysql -u root -p < ./info/schema.sql
+
+data:
+mysql -u root -p -D library < ./info/data.sql
