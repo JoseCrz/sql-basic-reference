@@ -82,6 +82,28 @@ SELECT name, email, gender FROM clients where gender = 'M' LIMIT 10;
 -- | David Casals        | David.06746883V@random.names       | M      |
 -- +---------------------+------------------------------------+--------+
 
+SELECT * FROM authors WHERE author_id > 0 AND author_id <= 5;
+-- +-----------+--------------------+-------------+
+-- | author_id | name               | nationality |
+-- +-----------+--------------------+-------------+
+-- |         1 | Sam Altman         | USA         |
+-- |         2 | Freddy Vega        | COL         |
+-- |         3 | Arthur Conan Doyle | GBR         |
+-- |         4 | Chuck Palahniuk    | USA         |
+-- |         5 | Juan Rulfo         | MEX         |
+-- +-----------+--------------------+-------------+
+
+SELECT * FROM authors WHERE author_id BETWEEN 1 AND 5;
+-- +-----------+--------------------+-------------+
+-- | author_id | name               | nationality |
+-- +-----------+--------------------+-------------+
+-- |         1 | Sam Altman         | USA         |
+-- |         2 | Freddy Vega        | COL         |
+-- |         3 | Arthur Conan Doyle | GBR         |
+-- |         4 | Chuck Palahniuk    | USA         |
+-- |         5 | Juan Rulfo         | MEX         |
+-- +-----------+--------------------+-------------+
+
 -- * year function
 SELECT year(birthdate) FROM clients LIMIT 10;
 -- +-----------------+
